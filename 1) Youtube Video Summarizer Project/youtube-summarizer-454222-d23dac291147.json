@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "youtube-summarizer-454222",
+  "private_key_id": "d23dac291147ccbf2ba8ce6b55564caddcbff328",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC4dayO2tdw6z0T\nH6A72T8pqIqk9AomQHF9B2ReRwwkbE8TNKW5HGFKhzue3n/JpfpCwj+Zp9zwhZzG\nlEl+X/sWAqyKRI0FfblBM5zHbeG/moOjN5hwyAU1CIoC1YbvLEsEgjuOVSbJjyM9\n4R5tNshrL0seIdQy1mjin+Dg3DtctQJLGXj3xb0haQkTdBoc82YlHKKksXx7zV6p\nqhbJYQbTQF9dY480JLXySEpEU1hXsn40q4zhIkrNLXJdaQ6uyUO2tTIMT85qoOC2\nJGhzpPnl3OiBGzYQeb/T7Nj/84PbhtLblD5SVojie9ynfTHm4JBH6JAe8xiIS3iu\nwMTq0DF9AgMBAAECggEAGZ4vgMg66zyjHFCkR9DprpxGOReIK1Iq5iLh2R1ukxu/\nCwX2TX74B3Tq86r8vgwroBxAif4Kt2rPCwiVgRQibSb3ld0PECgAU7evz/CzorvP\ntBootTfKUAMSFnJXovLuA5UfYVVJJZgYBw7d/hasKgVaSOKI3ntG+3vEgbuEZmD5\nV61wz9NulniFNJ9bOMr3jm6d4lLXyST0Z6sHRRu9AwrZy+ciRExroe+zMF4PsP6o\npznKoB1/vzHMX3Ge+ggaIg7GMPVKJqWpBa1dmpgZpS6pFzexKo3VjIYkVnAMIwa/\nm2dY/ikuOJm+oAsumH2qa+fKLlLhZadRbNtZbMw1LwKBgQDq+C+1EINl5An9+G2H\nWesfmNAQnYKGJZG1wCftgX98HQVU7NfZm7iOcnCdLwGDtRKGJba2cxNUkZTMtkxs\nOtk0MJmY9eR9voizbMT8BTxDOUtcnIbn86eNonC1QulfK4OmdMO0cNbecpbdmoEX\nXMIdFe1Il98P+Yo9kgBgepG8hwKBgQDI+CpVfIg301Pnts9uesLs4Atwo6XW2ZSQ\nusKHoYdDQjpcZGp6aQ/jYu3EBeKo/vGoSVCsgXitlQIZhW+Cu0qsh3l7Hzfy7Llx\nbn0JiARTDXIBLr16//CtYqdNm1MAjEk1aDeuJ28utOrMSfQopjp5u4p2eMY8Hd+l\nrXUyyXFG2wKBgDStwdxhQGRGlOromH3A7hLear9e4NV8dMd/tjPsVY2Y4AojM11p\nKR5ej9rdoARMQ0PqDqWm9Q1/uhGPSWD2bJ3jy3vcnQaIAhPf7eXmspULslaoDSLR\noJ4DbitlPfcFRXW7NektZy7mF+bE7e4z8J0evl0JF4x4UMLvCcCXmjbfAoGAbRTm\nRYhWl5aJEFhVtu3DJ7dj/juVJEztKrF0LRIrzQIBk2ydrtuf2Bg2XhOjt37JxEIn\nG7sauX0LqraWlCr8mTDfa0jCoYSEE2GZVLcTQdEmdCXeiwiopjPKA4GvR7jdc7Oh\npVGaM4vXdhMeB4JScwisWymqz66XWeIQnwRgC8kCgYAe6EdMNthDpzdAwH7rvlEm\nUSgbQDNBlE3KEBoUKcJAo4RFu91sADVBcDjQeaC4smmGPLJBoQKr1rmCGwBa03Jp\n6YxhtzEEZ5yCw3Eb5kCgqT5Egu9KiA+xIelhVWodsSCK2ozbWIw9CwTtiXI+MtXK\nGdMn4eGRPhGYaJT6XQnoGA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "speech-to-text-api-user@youtube-summarizer-454222.iam.gserviceaccount.com",
+  "client_id": "118224036223628760657",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/speech-to-text-api-user%40youtube-summarizer-454222.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
