@@ -17,7 +17,7 @@ Built with:
   - `"Which country has the highest GDP?"`  
   - `"Top 5 products by sales in 2022"`
 - 🧠 Automatically generates SQL using Google Gemini API
-- 🪄 No setup — works from browser once deployed
+- No setup — works from browser once deployed
 
 ---
 
@@ -29,29 +29,29 @@ Built with:
 
 ## 🛠️ Local Development
 
-### 1. Backend
+1. Backend
 
 ```bash
 cd backend
 pip install -r requirements.txt
 python -m uvicorn main:app --reload
+```
 
-
-### 2. Frontend
+2. Frontend
 
 ```bash
 cd frontend
 streamlit run app.py
-
----
+```
 
 🔐 Setup Gemini API
 
 Get your API key from: https://makersuite.google.com/app/apikey
 Create a .env in backend/:
 
-'''bash
+```bash
 GEMINI_API_KEY=your_key_here
+```
 
 ---
 
@@ -61,3 +61,7 @@ Are UTF-8 or ISO-8859-1 encoded
 Have headers in the first row
 Are not password protected or zipped
 Are ideally under 20MB (for smooth preview)
+
+---
+Author
+Kintur Shah
