@@ -44,7 +44,7 @@ cd frontend
 streamlit run app.py
 ```
 
-🔐 Setup Gemini API
+## 🔐 Setup Gemini API
 
 Get your API key from: https://makersuite.google.com/app/apikey <br>
 Create a .env file in backend/:
@@ -53,9 +53,8 @@ Create a .env file in backend/:
 GEMINI_API_KEY=your_key_here
 ```
 
----
 
-⚠️ Notes for Users
+## ⚠️ Notes for Users
 Please ensure uploaded CSVs:
 Are UTF-8 or ISO-8859-1 encoded
 Have headers in the first row
@@ -67,7 +66,7 @@ Are ideally under 20MB (for smooth preview)
 Contributions are welcome! Feel free to **fork** this repository and submit a **pull request**. 🚀
 
 ## Hosted on Streamlit CLoud
-[App]([url](https://amazon-prime-dashboard-by-kt.streamlit.app))
+[App]([url](https://llm_sql_data_analyst.streamlit.app))
 
 ## 📧 Contact
 For any suggestions or feedback, reach out via [LinkedIn](https://www.linkedin.com/in/kintur-shah/) | [Github](https://github.com/kinturkt)
