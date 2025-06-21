@@ -1,6 +1,6 @@
 # 🧠 LLM SQL Data Analyst
 
-An AI-powered data analyst that lets you **upload any CSV** and **ask natural language questions** — it responds with generated SQL and tabular results.
+An AI-powered data analyst that lets you **upload any CSV** and **ask natural language questions** - it responds with generated SQL and tabular results.
 
 Built with:
 - 🐍 FastAPI (Python backend)
