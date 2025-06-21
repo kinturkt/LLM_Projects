@@ -1,4 +1,4 @@
-# 🧠 LLM SQL Data Analyst
+# 🧠 SQLMind - An LLM Powered SQL Data Analyst
 
 An AI-powered data analyst that lets you **upload any CSV** and **ask natural language questions** - it responds with generated SQL and tabular results.
 
