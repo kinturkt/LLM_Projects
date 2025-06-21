@@ -46,8 +46,8 @@ streamlit run app.py
 
 🔐 Setup Gemini API
 
-Get your API key from: https://makersuite.google.com/app/apikey
-Create a .env in backend/:
+Get your API key from: https://makersuite.google.com/app/apikey <br>
+Create a .env file in backend/:
 
 ```bash
 GEMINI_API_KEY=your_key_here
@@ -62,6 +62,12 @@ Have headers in the first row
 Are not password protected or zipped
 Are ideally under 20MB (for smooth preview)
 
----
-Author
-Kintur Shah
+
+## 🤝 Contributing
+Contributions are welcome! Feel free to **fork** this repository and submit a **pull request**. 🚀
+
+## Hosted on Streamlit CLoud
+[App]([url](https://amazon-prime-dashboard-by-kt.streamlit.app))
+
+## 📧 Contact
+For any suggestions or feedback, reach out via [LinkedIn](https://www.linkedin.com/in/kintur-shah/) | [Github](https://github.com/kinturkt)
