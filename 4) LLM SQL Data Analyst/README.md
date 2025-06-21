@@ -21,6 +21,42 @@ Built with:
 
 ---
 
+---
+
+## 💬 What Kind of Questions Can You Ask?
+
+This app supports natural language questions that are translated into SQL queries. Here are some examples:
+
+#### 🔍 General Analytics
+- What’s the total number of insured children per region?
+- Show average runs per match for each batsman.
+- What is the highest price among all products?
+- Which cars have mileage above 25?
+
+#### 📊 Sorting & Ranking
+- Who are the top 5 earners by charges?
+- List top 3 batsmen by strike rate.
+- Which cars have the highest horsepower?
+
+#### 📌 Filtering
+- Show all entries where region is northeast.
+- List customers with BMI over 30.
+- Which movies were released after 2015?
+
+#### 📈 Aggregations
+- What’s the average charges by smoker status?
+- Total number of children per region?
+- Count the number of products in each category.
+
+#### ⚙️ Any question based on:
+- Columns like: `age`, `region`, `bmi`, `charges`, etc.
+- Dataset headers dynamically detected upon upload
+
+
+ℹ️ *Note:* Avoid ambiguous or vague questions. The model relies on accurate column names and well-formed queries.
+
+---
+
 ## 🌐 Live Demo
 
 [Streamlit Cloud](https://streamlit.io/cloud)
