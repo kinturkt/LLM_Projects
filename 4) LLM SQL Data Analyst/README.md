@@ -21,8 +21,6 @@ Built with:
 
 ---
 
----
-
 ## 💬 What Kind of Questions Can You Ask?
 
 This app supports natural language questions that are translated into SQL queries. Here are some examples:
