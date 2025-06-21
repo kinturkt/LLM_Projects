@@ -90,12 +90,13 @@ GEMINI_API_KEY=your_key_here
 ```
 
 
-## ⚠️ Notes for Users
-Please ensure uploaded CSVs:
-Are UTF-8 or ISO-8859-1 encoded
-Have headers in the first row
-Are not password protected or zipped
-Are ideally under 20MB (for smooth preview)
+## ⚠️ Notes for Users <br>
+
+Please ensure uploaded CSVs: <br> 
+Are UTF-8 or ISO-8859-1 encoded <br>
+Have headers in the first row <br>
+Are not password protected or zipped <br>
+Are ideally under 20MB (for smooth preview) <br>
 
 
 ## 🤝 Contributing
