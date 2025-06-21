@@ -16,6 +16,8 @@ Built with:
 - 💬 Ask questions like:  
   - `"Which country has the highest GDP?"`  
   - `"Top 5 products by sales in 2022"`
+  - `"List patients with BMI greater than 30"`
+  - `"List top 3 batsmen by strike rate"`
 - 🧠 Automatically generates SQL using Google Gemini API
 - No setup — works from browser once deployed
 
