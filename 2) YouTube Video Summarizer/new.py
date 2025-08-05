@@ -57,7 +57,7 @@ def summarize_with_gemini(transcript_text, prompt_type="default"):
     return response.text
 
 def main():
-    st.title("🎥 YouTube Video Summarizer (Powered by Gemini)")
+    st.title("YouTube Video Summarizer (Powered by Gemini)")
     st.write("Enter a YouTube video URL to extract and summarize its content.")
 
     url = st.text_input("YouTube Video URL")
@@ -82,7 +82,7 @@ def main():
                 with st.spinner("Generating with Gemini..."):
                     cleaned = clean_transcript(transcript)
                     output = summarize_with_gemini(cleaned, prompt_type=prompt_type)
-                    st.subheader("📘 Output")
+                    st.subheader("Output")
                     st.write(output)
         else:
             st.warning("Transcript not available for this video.")
