@@ -22,7 +22,7 @@ A collection of practical apps built using Large Language Models (LLMs) like Gem
 
 ---
 
-### 🚧 Coming Soon
+### Coming Soon
 
 5. **📉 Text Summarizer + Chat**  
    Upload a document and chat with it - ask anything, get concise summaries or insights.
