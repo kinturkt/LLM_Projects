@@ -28,7 +28,7 @@ A collection of practical apps built using Large Language Models (LLMs) like Gem
    Upload a document and chat with it - ask anything, get concise summaries or insights.
 
 6. **📈 Chart Generator from Natural Language**  
-   Ask for visualizations using plain English — auto-generate matplotlib/seaborn charts.
+   Ask for visualizations using plain English - auto-generate matplotlib/seaborn charts.
 
 ---
 
