@@ -45,12 +45,11 @@ A collection of practical apps built using Large Language Models (LLMs) like Gem
 
 ## 🌐 Live Demo / Cloud View
 
-Try out the live versions of these apps hosted on the cloud:
-Gemini AI Assistant Bot → [Live Demo](url)
-YouTube Video Summarizer → [Live Demo]([url](https://huggingface.co/spaces/kinturkt/YT_Summarizer_App?logs=container))
-ATS Resume Analyzer → [Live Demo](url)
-LLM SQL Data Analyst → [Live Demo](url)
-
+Try out the live versions of these apps hosted on the cloud: <br>
+Gemini AI Assistant Bot → [Live Demo](url) <br>
+YouTube Video Summarizer → [Live Demo]([url](https://huggingface.co/spaces/kinturkt/YT_Summarizer_App?logs=container)) <br>
+ATS Resume Analyzer → [Live Demo](url) <br>
+LLM SQL Data Analyst → [Live Demo](url) 
 
 ---
 ## 📧 Contact
