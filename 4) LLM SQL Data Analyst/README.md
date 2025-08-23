@@ -19,7 +19,7 @@ Built with:
   - `"List patients with BMI greater than 30"`
   - `"List top 3 batsmen by strike rate"`
 - 🧠 Automatically generates SQL using Google Gemini API
-- No setup — works from browser once deployed
+- No setup - works from browser once deployed
 
 ---
 
@@ -53,7 +53,7 @@ This app supports natural language questions that are translated into SQL querie
 - Dataset headers dynamically detected upon upload
 
 
-ℹ️ *Note:* Avoid ambiguous or vague questions. The model relies on accurate column names and well-formed queries.
+*Note:* Avoid ambiguous or vague questions. The model relies on accurate column names and well-formed queries.
 
 ---
 
