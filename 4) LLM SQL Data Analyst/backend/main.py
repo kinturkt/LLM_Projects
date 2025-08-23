@@ -23,7 +23,7 @@ os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 @app.post("/upload")
 async def upload_csv(file: UploadFile = File(...)):
     try:
-        print("📥 File received:", file.filename)
+        print("File received:", file.filename)
         file_path = os.path.join(UPLOAD_FOLDER, file.filename)
         db_path = os.path.join(UPLOAD_FOLDER, "data.db")
         table_name = "uploaded_table"
@@ -32,7 +32,7 @@ async def upload_csv(file: UploadFile = File(...)):
             f.write(await file.read())
 
         preview = save_csv_to_db(file_path, db_path, table_name)
-        print("✅ Preview generated")
+        print("Preview generated")
         schema = get_table_schema(db_path, table_name)
         columns = schema.split(", ")
         return {"preview": preview, "schema": schema}
@@ -48,9 +48,7 @@ async def query_data(question: str = Form(...)):
         table_name = "uploaded_table"
         schema = get_table_schema(db_path, table_name)
         columns = schema.split(", ")
-
         schema_context = f"Table name: {table_name}, Columns: {schema}"
-
         sql = generate_sql_query(question, schema_context, table_name, columns)
         result = run_sql_query(db_path, sql)
         return {"sql": sql, "results": result}
