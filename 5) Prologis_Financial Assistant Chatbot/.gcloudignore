@@ -1,0 +1,18 @@
+.venv/
+env/
+__pycache__/
+*.pyc
+
+# Ignore logs, cache
+*.log
+*.cache
+*.tmp
+
+# Ignore personal data and credentials
+.env
+*.json
+
+# Ignore unnecessary project files
+.idea/
+.vscode/
+.DS_Store
