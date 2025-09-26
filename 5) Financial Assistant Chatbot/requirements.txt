@@ -1,1 +1,13 @@
-
+supabase
+langchain
+langchain-community
+langchain-google-genai
+psycopg2-binary
+PyPDF2
+tiktoken
+python-dotenv
+vertexai
+streamlit
+beautifulsoup4
+requests
+google-cloud-aiplatform
