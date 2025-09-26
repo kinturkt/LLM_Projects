@@ -1,6 +1,0 @@
-PHASE-1:
-
-Goal: Convert financial PDFs → text → chunks → embeddings → store in Elasticsearch
-
-PHASE-2:
-
