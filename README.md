@@ -22,10 +22,14 @@ A collection of practical apps built using Large Language Models (LLMs) like Gem
 
 ---
 
-### Coming Soon
+## 🚧 In Progress
 
-5. **📉 Text Summarizer + Chat**  
-   Upload a document and chat with it - ask anything, get concise summaries or insights.
+5. 🧠 DualLLM Summarizer Chat  
+Upload a document and ask questions — get responses from both Gemini and Groq side-by-side for comparison and insight.
+
+---
+
+### Coming Soon
 
 6. **📈 Chart Generator from Natural Language**  
    Ask for visualizations using plain English - auto-generate matplotlib/seaborn charts.
