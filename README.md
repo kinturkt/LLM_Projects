@@ -1,6 +1,6 @@
 # 🤖 LLM Projects
 
-A collection of practical apps built using Large Language Models (LLMs) like Gemini Pro. These projects combine FastAPI, Streamlit, and LLM APIs to solve real-world problems using natural language.
+A collection of practical apps built using Large Language Models (LLMs) like Gemini Pro, Groq, and OpenAI. These projects combine FastAPI, Streamlit, and LLM APIs to solve real-world problems using natural language.
 
 ---
 
@@ -9,52 +9,60 @@ A collection of practical apps built using Large Language Models (LLMs) like Gem
 ### ✅ Completed
 
 1. **🧠 Gemini AI Assistant Bot**  
-   Chat-like bot powered by Gemini, capable of answering general questions interactively.
+   A conversational assistant powered by Gemini, capable of answering general queries in real time.
 
 2. **📺 YouTube Video Summarizer**  
-   Paste a YouTube link and get a clean, concise summary of its content using LLMs.
+   Paste a YouTube link and get a concise summary of the video content using LLM-powered transcription and summarization.
 
 3. **📄 Intelligent ATS Resume Analyzer**  
-   Upload a resume and job description - get ATS insights, keyword matching, and suitability score.
+   Upload a resume and job description — get ATS insights, keyword match percentage, and a suitability score.
 
-4. **📊 LLM SQL Data Analyst**  
-   Upload a CSV, ask natural-language questions, and get SQL-generated answers instantly.
-
----
-
-## 🚧 In Progress
-
-5. 🧠 DualLLM Summarizer Chat  
-Upload a document and ask questions — get responses from both Gemini and Groq side-by-side for comparison and insight.
+4. **📊 SQLMind — LLM SQL Data Analyst**  
+   Upload any CSV, ask natural-language questions, and get SQL-generated answers with charts and summaries.
 
 ---
 
-### Coming Soon
+### 🚧 In Progress
 
-6. **📈 Chart Generator from Natural Language**  
-   Ask for visualizations using plain English - auto-generate matplotlib/seaborn charts.
+5. **🧠 DualLLM Summarizer Chat**  
+   Upload a document and ask questions — get side-by-side answers from **Gemini** and **Groq** for comparison and deeper insight.
+
+---
+
+### 🔜 Coming Soon
+
+6. **📈 AIViz — Chart Generator from Natural Language**  
+   Ask for charts in plain English — generate matplotlib or seaborn plots instantly.
+
+7. **🎙️ TalkWise — Personal AI Voice Assistant**  
+   Voice-enabled assistant powered by LLMs — speak naturally, ask questions, and get spoken or visual responses in real time.
 
 ---
 
 ## 🧰 Tech Stack
 
-- Gemini Pro / Gemini 1.5 / OpenAI (easily swappable)
-- FastAPI + Uvicorn for backend APIs
-- Streamlit for frontend UI
-- SQLite for dynamic storage
-- Pandas for data analysis
-- Python for coding
+- **LLMs**: Gemini Pro / Gemini 1.5, Groq, OpenAI (modular & swappable)
+- **LLM Orchestration**: LangChain for prompt routing and multi-model pipelines
+- **Backend**: FastAPI + Uvicorn
+- **Frontend**: Streamlit
+- **Database**: SQLite for chat history and file storage
+- **Data Analysis**: Pandas
+- **Language**: Python
+- **Embeddings**: `text-embedding-3-small`, `InstructorXL`
+- **Vector Store**: FAISS or ChromaDB (for RAG)
 
 ---
 
-## 🌐 Live Demo / Cloud View
+## 🌐 Live Demos
 
-Try out the live versions of these apps hosted on the cloud: <br>
-Gemini AI Assistant Bot → [Live Demo](https://huggingface.co/spaces/kinturkt/Gemini_AI_Assistant_Bot) <br>
-YouTube Video Summarizer → [Live Demo](https://huggingface.co/spaces/kinturkt/YT_Summarizer_App) <br>
-ATS Resume Analyzer → [Live Demo](url) <br>
-LLM SQL Data Analyst → [Live Demo](url) 
+- 🧠 Gemini AI Assistant Bot → [Live Demo](https://huggingface.co/spaces/kinturkt/Gemini_AI_Assistant_Bot)  
+- 📺 YouTube Summarizer → [Live Demo](https://huggingface.co/spaces/kinturkt/YT_Summarizer_App)  
+- 📄 ATS Resume Analyzer → *[Live Demo Coming Soon]*  
+- 📊 SQLMind → *[Live Demo Coming Soon]*  
 
 ---
+
 ## 📧 Contact
-For any suggestions or feedback, reach out via LinkedIn | Github
+
+For suggestions or collaboration, feel free to connect:  
+**LinkedIn** | **GitHub** → [github.com/kinturkt](https://github.com/kinturkt)
