@@ -17,7 +17,7 @@ A collection of practical apps built using Large Language Models (LLMs) like Gem
 3. **📄 Intelligent ATS Resume Analyzer**  
    Upload a resume and job description — get ATS insights, keyword match percentage, and a suitability score.
 
-4. **📊 SQLMind — LLM SQL Data Analyst**  
+4. **📊 SQLMind - LLM SQL Data Analyst**  
    Upload any CSV, ask natural-language questions, and get SQL-generated answers with charts and summaries.
 
 ---
@@ -31,10 +31,10 @@ A collection of practical apps built using Large Language Models (LLMs) like Gem
 
 ### 🔜 Coming Soon
 
-6. **📈 AIViz — Chart Generator from Natural Language**  
+6. **📈 AIViz - Chart Generator from Natural Language**  
    Ask for charts in plain English — generate matplotlib or seaborn plots instantly.
 
-7. **🎙️ TalkWise — Personal AI Voice Assistant**  
+7. **🎙️ TalkWise - Personal AI Voice Assistant**  
    Voice-enabled assistant powered by LLMs — speak naturally, ask questions, and get spoken or visual responses in real time.
 
 ---
