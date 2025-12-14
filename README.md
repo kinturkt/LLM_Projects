@@ -15,7 +15,7 @@ A collection of practical apps built using Large Language Models (LLMs) like Gem
    Paste a YouTube link and get a concise summary of the video content using LLM-powered transcription and summarization.
 
 3. **📄 Intelligent ATS Resume Analyzer**  
-   Upload a resume and job description — get ATS insights, keyword match percentage, and a suitability score.
+   Upload a resume and job description, get ATS insights, keyword match percentage, and a suitability score.
 
 4. **📊 SQLMind - LLM SQL Data Analyst**  
    Upload any CSV, ask natural-language questions, and get SQL-generated answers with charts and summaries.
@@ -25,17 +25,17 @@ A collection of practical apps built using Large Language Models (LLMs) like Gem
 ### 🚧 In Progress
 
 5. **🧠 DualLLM Summarizer Chat**  
-   Upload a document and ask questions — get side-by-side answers from **Gemini** and **Groq** for comparison and deeper insight.
+   Upload a document and ask questions, get side-by-side answers from **Gemini** and **Groq** for comparison and deeper insight.
 
 ---
 
 ### 🔜 Coming Soon
 
 6. **📈 AIViz - Chart Generator from Natural Language**  
-   Ask for charts in plain English — generate matplotlib or seaborn plots instantly.
+   Ask for charts in plain English - generate matplotlib or seaborn plots instantly.
 
 7. **🎙️ TalkWise - Personal AI Voice Assistant**  
-   Voice-enabled assistant powered by LLMs — speak naturally, ask questions, and get spoken or visual responses in real time.
+   Voice-enabled assistant powered by LLMs - speak naturally, ask questions, and get spoken or visual responses in real time.
 
 ---
 
