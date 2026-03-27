@@ -65,4 +65,4 @@ A collection of practical apps built using Large Language Models (LLMs) like Gem
 ## 📧 Contact
 
 For suggestions or collaboration, feel free to connect:  
-**LinkedIn**[linkedin.comm/in/kinturkt](https://linkedin.comm/in/kinturkt) | **GitHub**[github.com/kinturkt](https://github.com/kinturkt)
+[LinkedIn](https://linkedin.com/in/kintur-shah) | [GitHub](https://github.com/kinturkt)
