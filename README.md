@@ -53,12 +53,12 @@ A collection of practical apps built using Large Language Models (LLMs) like Gem
 
 ---
 
-## 🌐 Live Demos
+## 🌐 Live Demo Links
 
 - 🧠 Gemini AI Assistant Bot → [Live Demo](https://huggingface.co/spaces/kinturkt/Gemini_AI_Assistant_Bot)  
 - 📺 YouTube Summarizer → [Live Demo](https://huggingface.co/spaces/kinturkt/YT_Summarizer_App)  
-- 📄 ATS Resume Analyzer → *[Live Demo Coming Soon]*  
-- 📊 SQLMind → *[Live Demo Coming Soon]*  
+- 📄 ATS Resume Analyzer → [Live Demo](https://ats-resume-analyzer-project.streamlit.app/) 
+- 📊 SQLMind → *[Live Demo](https://sqlmind-sql-data-analyst.streamlit.app/)
 
 ---
 
