@@ -5,24 +5,20 @@ import PyPDF2 as pdf
 from dotenv import load_dotenv
 import json
 
-# Load the .env variables
 load_dotenv()
 
-# Configure the Gemini API
 try:
     genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 except Exception as e:
     st.error(f"Failed to configure Gemini API: {e}. Ensure GOOGLE_API_KEY is set.")
     st.stop()
 
-# --- Helper Functions ---
-
 def get_gemini_response(prompt_text, purpose="evaluation"):
     """
     Calls the Gemini API with the formatted prompt and requests JSON output.
     """
     try:
-        model = genai.GenerativeModel('gemini-2.0-flash')
+        model = genai.GenerativeModel('gemini-2.5-flash')
         response = model.generate_content(
             prompt_text,
             generation_config=genai.types.GenerationConfig(
@@ -52,8 +48,6 @@ def input_pdf_text(uploaded_file):
     except Exception as e:
         st.error(f"Error reading or parsing PDF: {e}")
         return None
-
-# --- Prompt Templates ---
 
 input_prompt_template = """
 You are a highly sophisticated AI-powered Application Tracking System (ATS) with specialized expertise in evaluating resumes for roles in the tech industry, including software engineering, data science, data analysis, and big data engineering. Your primary goal is to provide a comprehensive evaluation of the submitted resume against the provided job description. The job market is highly competitive, so your feedback must be precise, actionable, and aimed at significantly improving the candidate's chances.
@@ -124,11 +118,8 @@ Job Description:
 {jd}
 """
 
-# --- Streamlit App UI ---
-
 st.set_page_config(layout="wide", page_title="Gemini Powered Smart ATS System")
 
-# Initialize session state variables if they don't exist
 if 'resume_text_for_cl' not in st.session_state:
     st.session_state.resume_text_for_cl = None
 if 'jd_for_cl' not in st.session_state:
@@ -138,12 +129,10 @@ if 'cover_letter_response' not in st.session_state:
 if 'ats_evaluation_done' not in st.session_state:
     st.session_state.ats_evaluation_done = False
 
-# --- Main App Layout ---
 st.title("🚀 Gemini Powered Smart ATS System")
 st.markdown("Evaluate your resume against job descriptions and get actionable feedback to stand out!")
 st.markdown("---")
 
-# --- Input Column ---
 col1, col2 = st.columns([0.4, 0.6], gap="large")
 
 with col1:
@@ -156,7 +145,6 @@ with col1:
     )
     submit_button = st.button("✨ Evaluate My Resume", type="primary", use_container_width=True)
 
-# --- Output Column ---
 with col2:
     st.header("📊 ATS Evaluation Results")
 
@@ -272,7 +260,6 @@ with col2:
     else:
         st.info("Fill in the job description, upload your resume, and click 'Evaluate My Resume' to see the analysis here.")
 
-    # --- Cover Letter Snippet Generation Section ---
     if st.session_state.ats_evaluation_done:
         st.markdown("---")
         st.subheader("💌 Cover Letter Assistance")
