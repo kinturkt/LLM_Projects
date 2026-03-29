@@ -16,7 +16,7 @@ genai.configure(api_key=gemini_api_key)
 st.set_page_config(page_title="Gemini AI Math & Knowledge Assistant", layout="wide")
 st.markdown("<h1 style='text-align: center; color: #ff6600; font-size: 42px; font-weight: bold;'>Gemini AI Math & Knowledge Assistant</h1>", unsafe_allow_html=True)
 
-def generate_response(prompt, model_name="gemini-2.0-flash"):
+def generate_response(prompt, model_name="gemini-1.5-flash"):
     try:
         model = genai.GenerativeModel(model_name)
         response = model.generate_content(prompt)
@@ -77,7 +77,6 @@ user_input = st.text_area(
     value=st.session_state["current_query"],
     height=100,
 )
-
 
 if st.button("Submit Query"):
     user_input = user_input.strip()
