@@ -23,9 +23,13 @@ def get_transcript(video_id):
         fetched_transcript = ytt_api.fetch(video_id)
         transcript = fetched_transcript.to_raw_data()
         return " ".join([entry['text'] for entry in transcript])
+        
     except (TranscriptsDisabled, NoTranscriptFound):
         return None
     except Exception as e:
+        error_str = str(e).lower()
+        if "blocked" in error_str or "too many requests" in error_str:
+            return "BLOCKED_BY_YOUTUBE"
         return f"Error fetching transcript: {str(e)}"
 
 def clean_transcript(text):
