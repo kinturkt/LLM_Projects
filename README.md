@@ -74,7 +74,7 @@ llm_projects/
 
 1. Clone the repository
 ```
-git clone [https://github.com/kinturkt/llm_projects.git]((https://github.com/kinturkt/LLM_Projects.git))
+git clone https://github.com/kinturkt/LLM_Projects.git
 cd LLM_Project
 ```
 
