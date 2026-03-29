@@ -16,13 +16,30 @@ genai.configure(api_key=gemini_api_key)
 st.set_page_config(page_title="Gemini AI Math & Knowledge Assistant", layout="wide")
 st.markdown("<h1 style='text-align: center; color: #ff6600; font-size: 42px; font-weight: bold;'>Gemini AI Math & Knowledge Assistant</h1>", unsafe_allow_html=True)
 
-def generate_response(prompt, model_name="gemini-1.5-flash"):
+def generate_response(prompt, model_name="gemini-2.5-flash"):
     try:
         model = genai.GenerativeModel(model_name)
         response = model.generate_content(prompt)
         return response.text.strip() if response.text else "No response generated."
+    
     except Exception as e:
-        return f"Error: {e}"
+        error_msg = str(e).lower()
+        
+        if "429" in error_msg or "quota" in error_msg:
+            return (
+                "**Out of Daily Quota:** I have hit my daily limit for the free tier "
+                "of Gemini 2.5 Flash (20 requests/day). Please try again tomorrow, or "
+                "update the Google AI Studio billing settings to unlock more requests!"
+            )
+        
+        elif "404" in error_msg:
+            return (
+                "**Model Not Found:** The AI model requested does not exist or "
+                "is not supported by this API key."
+            )
+            
+        else:
+            return f"**API Error:** I ran into a technical issue. Details: {e}"
 
 if "history" not in st.session_state:
     st.session_state["history"] = [{
@@ -37,8 +54,7 @@ st.sidebar.write("*Chat history can be downloaded as a text file for future refe
 chat_text = "\n".join([f"{msg['role'].capitalize()}: {msg['content']}" for msg in st.session_state["history"]])
 st.sidebar.download_button("Download Chat History", chat_text, file_name="chat_history.txt", key="download_chat_btn")
 
-
-st.sidebar.write("🎤 **Voice Input Instructions:** Speak your question clearly and concisely for best results.")
+st.sidebar.write("**Voice Input Instructions:** Speak your question clearly and concisely for best results.")
 
 if st.sidebar.button("Use Voice Input", key="voice_input_btn_sidebar"):
     recognizer = sr.Recognizer()
