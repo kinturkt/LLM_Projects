@@ -22,10 +22,7 @@ def get_transcript(video_id):
         ytt_api = YouTubeTranscriptApi()
         fetched_transcript = ytt_api.fetch(video_id)
         transcript = fetched_transcript.to_raw_data()
-        
-        # Join all the text pieces together
         return " ".join([entry['text'] for entry in transcript])
-        
     except (TranscriptsDisabled, NoTranscriptFound):
         return None
     except Exception as e:
@@ -38,24 +35,12 @@ def clean_transcript(text):
     cleaned = re.sub(r'\s+', ' ', cleaned).strip()
     return cleaned
 
-def summarize_with_gemini(transcript_text, prompt_type="default"):
-    if prompt_type == "prompt-1":
-        prompt = ("You are a YouTube video summarizer. Generate a title based on the video's main topic or keywords. "
-                  "Then, generate subtitles or sections followed by a detailed summary in each section within 400 words.\n\nTranscript: \n")
-    elif prompt_type == "prompt-2":
-        prompt = ("Summarize the following YouTube transcript into 5-7 concise bullet points. Emphasize action steps, key insights, or tips shared. "
-                  "Avoid filler language and keep the output structured and informative.\n\nTranscript: \n")
-    elif prompt_type == "flashcards":
-        prompt = ("You are a flashcard generator. Read the following YouTube transcript and generate at least 5 flashcards in the format:\n\n"
-                  "Q: <Question based on key idea>\nA: <Short, correct answer>\n\nTranscript: \n")
-    elif prompt_type == "quiz":
-        prompt = ("You are a quiz generator. Read the following YouTube transcript and create a short quiz of 5 multiple-choice questions. "
-                  "Each question should include 1 correct answer and 3 plausible distractors.\n\nTranscript: \n")
-    else:
-        prompt = ("You are a YouTube video summarizer. Please summarize the transcript below into bullet points "
-                  "within 400 words, highlighting the key takeaways and insights.\n\nTranscript: \n")
+def summarize_with_gemini(transcript_text):
+    prompt = ("You are a YouTube video summarizer. Please summarize the transcript below into bullet points "
+              "within 800 words, highlighting the key takeaways and insights.\n\nTranscript: \n")
 
     model = genai.GenerativeModel("gemini-2.5-flash")
+    
     try:
         response = model.generate_content(prompt + transcript_text)
         return response.text
@@ -64,25 +49,32 @@ def summarize_with_gemini(transcript_text, prompt_type="default"):
         if "429" in error_msg or "quota" in error_msg:
             return (
                 "**Out of Daily Quota:** I have hit my daily limit for the free tier "
-                "of Gemini 2.5 Flash (20 requests/day). Please try again tomorrow, or "
-                "update the Google AI Studio billing settings to unlock more requests!"
+                "of Gemini 2.5 Flash (20 requests/day). Please try again tomorrow!"
             )
         elif "404" in error_msg:
-            return "⚠️ **Model Not Found:** The AI model requested does not exist or is not supported."
+            return "**Model Not Found:** The AI model requested does not exist or is not supported."
         else:
-            return f"⚠️ **API Error:** {e}"
+            return f"**API Error:** {e}"
 
 def main():
     st.title("YouTube Video Summarizer (Powered by Gemini)")
     st.write("Enter a YouTube video URL to extract and summarize its content.")
 
-    url = st.text_input("YouTube Video URL")
-    prompt_type = st.selectbox("Choose Output Type:", ("default", "prompt-1", "prompt-2", "flashcards", "quiz"))
+    # Group the input and the first button together
+    col1, col2 = st.columns([3, 1])
+    with col1:
+        url = st.text_input("YouTube Video URL", label_visibility="collapsed", placeholder="Paste YouTube link here...")
+    with col2:
+        fetch_clicked = st.button("Fetch Video")
 
-    if url:
-        video_id = get_video_id(url)
+    if fetch_clicked and url:
+        st.session_state.video_url = url
+
+    if "video_url" in st.session_state:
+        video_id = get_video_id(st.session_state.video_url)
+        
         if not video_id:
-            st.error("Invalid YouTube URL")
+            st.error("Invalid YouTube URL. Please check the link and try again.")
             return
 
         st.image(f"http://img.youtube.com/vi/{video_id}/0.jpg", use_container_width=True)
@@ -94,14 +86,14 @@ def main():
             st.subheader("Transcript Preview")
             st.text_area("Transcript (first 1000 characters):", transcript[:1000], height=200)
 
-            if st.button("Generate Output with Gemini"):
-                with st.spinner("Generating with Gemini..."):
+            if st.button("Generate a summary response from Gemini"):
+                with st.spinner("Generating summary..."):
                     cleaned = clean_transcript(transcript)
-                    output = summarize_with_gemini(cleaned, prompt_type=prompt_type)
-                    st.subheader("Output")
+                    output = summarize_with_gemini(cleaned)
+                    st.subheader("Video Summary")
                     st.write(output)
         else:
-            st.warning("Transcript not available for this video.")
+            st.warning("Transcript not available for this video. It might not have closed captions enabled.")
 
 if __name__ == "__main__":
     main()
