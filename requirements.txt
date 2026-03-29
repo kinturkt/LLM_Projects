@@ -3,3 +3,8 @@ PyPDF2
 google.generativeai
 python-dotenv
 pdf2image
+speechrecognition
+google-generativeai
+protobuf
+sympy
+wikipedia_api
