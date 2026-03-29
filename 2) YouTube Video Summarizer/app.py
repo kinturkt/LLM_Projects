@@ -19,8 +19,13 @@ def get_video_id(url_link):
 
 def get_transcript(video_id):
     try:
-        transcript = YouTubeTranscriptApi.get_transcript(video_id)
+        ytt_api = YouTubeTranscriptApi()
+        fetched_transcript = ytt_api.fetch(video_id)
+        transcript = fetched_transcript.to_raw_data()
+        
+        # Join all the text pieces together
         return " ".join([entry['text'] for entry in transcript])
+        
     except (TranscriptsDisabled, NoTranscriptFound):
         return None
     except Exception as e:
