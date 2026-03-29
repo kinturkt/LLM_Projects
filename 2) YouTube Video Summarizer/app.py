@@ -8,11 +8,10 @@ import google.generativeai as genai
 from youtube_transcript_api import YouTubeTranscriptApi, TranscriptsDisabled, NoTranscriptFound
 import re
 
-# Load environment variables
 load_dotenv()
 
 # Set up Gemini API key
-GEMINI_API_KEY = os.getenv("YOUR_YOUTUBE_API_KEY")
+GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 genai.configure(api_key=GEMINI_API_KEY)
 
 def get_video_id(url_link):
