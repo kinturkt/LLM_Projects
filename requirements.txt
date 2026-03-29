@@ -1,10 +1,9 @@
 streamlit
 PyPDF2
-google.generativeai
+google-generativeai
 python-dotenv
 pdf2image
-speechrecognition
-google-generativeai
+SpeechRecognition
 protobuf
 sympy
-wikipedia_api
+Wikipedia-API
