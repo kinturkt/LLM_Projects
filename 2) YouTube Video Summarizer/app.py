@@ -36,23 +36,36 @@ def clean_transcript(text):
 def summarize_with_gemini(transcript_text, prompt_type="default"):
     if prompt_type == "prompt-1":
         prompt = ("You are a YouTube video summarizer. Generate a title based on the video's main topic or keywords. "
-                    "Then, generate subtitles or sections followed by a detailed summary in each section within 400 words.\n\nTranscript: \n")
+                  "Then, generate subtitles or sections followed by a detailed summary in each section within 400 words.\n\nTranscript: \n")
     elif prompt_type == "prompt-2":
         prompt = ("Summarize the following YouTube transcript into 5-7 concise bullet points. Emphasize action steps, key insights, or tips shared. "
-                    "Avoid filler language and keep the output structured and informative.\n\nTranscript: \n")
+                  "Avoid filler language and keep the output structured and informative.\n\nTranscript: \n")
     elif prompt_type == "flashcards":
         prompt = ("You are a flashcard generator. Read the following YouTube transcript and generate at least 5 flashcards in the format:\n\n"
-                    "Q: <Question based on key idea>\nA: <Short, correct answer>\n\nTranscript: \n")
+                  "Q: <Question based on key idea>\nA: <Short, correct answer>\n\nTranscript: \n")
     elif prompt_type == "quiz":
         prompt = ("You are a quiz generator. Read the following YouTube transcript and create a short quiz of 5 multiple-choice questions. "
-                    "Each question should include 1 correct answer and 3 plausible distractors.\n\nTranscript: \n")
+                  "Each question should include 1 correct answer and 3 plausible distractors.\n\nTranscript: \n")
     else:
         prompt = ("You are a YouTube video summarizer. Please summarize the transcript below into bullet points "
-                    "within 400 words, highlighting the key takeaways and insights.\n\nTranscript: \n")
+                  "within 400 words, highlighting the key takeaways and insights.\n\nTranscript: \n")
 
-    model = genai.GenerativeModel("gemini-2.0-flash")
-    response = model.generate_content(prompt + transcript_text)
-    return response.text
+    model = genai.GenerativeModel("gemini-2.5-flash")
+    try:
+        response = model.generate_content(prompt + transcript_text)
+        return response.text
+    except Exception as e:
+        error_msg = str(e).lower()
+        if "429" in error_msg or "quota" in error_msg:
+            return (
+                "**Out of Daily Quota:** I have hit my daily limit for the free tier "
+                "of Gemini 2.5 Flash (20 requests/day). Please try again tomorrow, or "
+                "update the Google AI Studio billing settings to unlock more requests!"
+            )
+        elif "404" in error_msg:
+            return "⚠️ **Model Not Found:** The AI model requested does not exist or is not supported."
+        else:
+            return f"⚠️ **API Error:** {e}"
 
 def main():
     st.title("YouTube Video Summarizer (Powered by Gemini)")
